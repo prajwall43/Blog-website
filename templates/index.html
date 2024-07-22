@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')"  > 
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1> {{params['blog_name']}} </h1>
+                            <span class="subheading">Share your thoughts and Enjoy Millions of other's Blogs here.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-10">  
+                    
+                <!-- ToDo: Fetch it usinf for loop from database -->
+                {% for get_post in posts %}                
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="/post/{{get_post.Slug}}">
+                            <h2 class="post-title">{{ get_post.Title }}</h2>
+                            <h3 class="post-subtitle"> {{get_post.tag_line}} </h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">Prajwal Kachade</a>
+                            on {{get_post.Date}}
+                        </p>    
+                    </div>
+                    {{get_post.Content[0:250]}}...
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                </a></li>
+                    {% endfor %}
+
+                    <!-- Pager-->
+                    <div class="d-flex justify-content-end mb-4">
+                        <a class="btn btn-primary text-uppercase" href="{{prev}}" style="float: left; margin-right: 650px;""> &larr; Previous Posts </a>
+                                                <a class=" btn btn-primary text-uppercase" href="{{next}}" style="float: right;">Next Posts
+                            &rarr;</a>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        {% endblock %}        

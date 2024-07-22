@@ -1,0 +1,25 @@
+{
+    "params":
+    {
+        "local_server" : "True",
+        "local_uri" :"mysql://root:@localhost/blogworld",
+        "prod_uri" : "mysql://root:@localhost/blogworld",
+        "fb_url": "https://facebook.com/blogworld",
+        "tw_url": "https://x.com/blogworld",
+        "git_url": "https://github.com/blogworld",
+        "blog_name":"Blogs World",
+
+        "about_one":"Welcome to my corner of the internet! My name is Prajwal, and I am thrilled to have you here. I am passionate about technology, and thid blogs are my platform to share my journey, insights.",
+        "about":"Welcome to my corner of the internet! My name is Prajwal, and I am thrilled to have you here. I am passionate about technology and stock market, and this blog is my platform to share my journey, insights, and experiences.",
+        "about_two": "I am pursuing with a degree in CSE from RCOEM . I have interest in technology and stock marke. You will find all my blogs here about them. ",
+        "about_three": "I started this blog as a way to connect with like-minded individuals and to document my journey. Here, get a mix of technology and stock market knowledge. My goal is to create a community where we can learn, grow, and inspire each other.",
+        "about_four": "Thank you for stopping by! I hope you find my posts insightful and engaging. Feel free to leave comments, share your thoughts, and connect with me on gmail, github and x. Links are given below.",
+        
+        "no_of_posts": 3,
+        "admin_user": "prajwal@mail.com",
+        "admin_pass": "kachadept"
+
+
+    }
+
+}
